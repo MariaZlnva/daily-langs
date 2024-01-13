@@ -1,0 +1,126 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.header {
+  width: 100%;
+  padding-top: 48px;
+  padding-right: calc(100% / 11.65);
+  padding-left: calc(100% / 11.65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: fixed;
+  // right: 0;
+  // left: 0;
+  // top: 0;
+
+  @media screen and (max-width: 580px) {
+    padding: 33px 14px 0px;
+  }
+  &__logo {
+    width: 223px;
+    height: 43px;
+    @media screen and (max-width: 1020px) {
+      width: 131px;
+      height: 27px;
+    }
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 21px;
+    align-items: center;
+
+    @media screen and (max-width: 1020px) {
+      display: flex;
+      flex-direction: row;
+      column-gap: 18px;
+    }
+  }
+  &__nav {
+    @include font-sans($textM, $color-black, 500, 21.6px, 0.01em);
+  }
+  &__nav-item {
+    &_active {
+      color: $color-violet;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    gap: 71px;
+    list-style: none;
+    padding: 0;
+    margin: 0 40px 0 0;
+
+    @media screen and (max-width: 1020px) {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+    }
+  }
+  &__btn-search {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+    @media screen and (max-width: 1020px) {
+      display: none;
+    }
+  }
+  &__btn-profile {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__img-profile {
+    @media screen and (max-width: 1020px) {
+      width: 33px;
+      height: 33px;
+    }
+  }
+  &__lang-container {
+    display: flex;
+    gap: 7px;
+   
+    @media screen and (max-width: 1020px) {
+      display: none;
+    }
+  }
+  &__lang-link {
+    @include font-sans($textM, $color-black, 600, 21.6px, 0.01em);
+    text-decoration: none;
+  }
+  &__lang-img {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  @media screen and (max-width: 1020px) {
+    &__burger-btn {
+      cursor: pointer;
+    }
+    &__burger {
+      width: 37px;
+      display: flex;
+      gap: 7px;
+      flex-direction: column;
+      justify-content: space-around;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &__burger-line {
+      width: 100%;
+      height: 2px;
+      background-color: $color-violet;
+    }
+
+  }
+}
