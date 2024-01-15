@@ -1,12 +1,28 @@
 /* MIXINS */
 @mixin font-sans($size, $color, $weight, $lh: false, $ls: false) {
   font: {
-    family: 'Mulish', Helvetica, Arial, sans-serif;
+    family: "Mulish", Helvetica, Arial, sans-serif;
     size: $size;
     weight: $weight;
   }
   color: $color;
-  
+
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+@mixin font-sans-Montserrat($size, $color, $weight, $lh: false, $ls: false) {
+  font: {
+    family: "Montserrat", Helvetica, Arial, sans-serif;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+
   @if $lh {
     line-height: $lh;
   }

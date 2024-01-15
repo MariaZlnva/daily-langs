@@ -1,0 +1,81 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.main {
+  padding-right: calc(100% / 11.65);
+  padding-left: calc(100% / 11.65);
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 69px;
+  padding-bottom: 134px;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 1020px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 0px 14px 0px;
+    gap: 24px;
+    padding-bottom: 0px;
+  }
+
+  &__bg-lines {
+    background-image: url("../../images/lines.svg");
+    width: 272px;
+    height: 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 62px;
+    left: -11px;
+    background-size: contain;
+  }
+
+  &__bg-ellipse {
+    background-image: url("../../images/ellipse.svg");
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 39px;
+    right: -90px;
+    background-size: contain;
+  }
+
+  &__bg-star {
+    background-image: url("../../images/star.svg");
+    width: 147px;
+    height: 142px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 110px;
+    right: 25px;
+    background-size: contain;
+
+    @media screen and (max-width: 1020px) {
+      width: 85px;
+      top: -20px;
+      right: -5px;
+    }
+  }
+
+  &_bg-invisible {
+    @media screen and (max-width: 1020px) {
+      display: none;
+    }
+  }
+
+  // &_bg-star-small {
+  //   @media screen and (max-width: 580px) {
+  //     background-image: url("../../images/star.svg");
+  //     display: block;
+  //     width: 147px;
+  //     height: 142px;
+  //     bottom: 110px;
+  //     right: 25px;
+  //   }
+  // }
+}

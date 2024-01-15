@@ -1,0 +1,52 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.footer {
+  @include font-sans($textM, $color-white, 500, 21.6px, 0.01em);
+
+  background-color: $color-violet;
+  padding: 55px 124px 44px 120px;
+  padding-right: calc(100% / 11.65);
+  padding-left: calc(100% / 11.65);
+  display: grid;
+  row-gap: 55px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "links logo"
+    "copyright copyright";
+
+  @media screen and (max-width: 1020px) {
+    @include font-sans($textS, $color-white, 500, 16.8px, 0.01em);
+    row-gap: 28px;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 18px 14px 31px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    grid-area: links;
+
+    @media screen and (max-width: 1020px) {
+      gap: 18px;
+    }
+  }
+
+  &__logo {
+    justify-self: end;
+    grid-area: logo;
+    @media screen and (max-width: 1020px) {
+      align-self: center;
+
+      width: 125px;
+      height: 25px;
+    }
+  }
+  &__copyright {
+    grid-area: copyright;
+    text-align: center;
+  }
+}

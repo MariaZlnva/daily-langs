@@ -3,12 +3,14 @@
 
 .header {
   width: 100%;
+  box-sizing: border-box;
   padding-top: 48px;
   padding-right: calc(100% / 11.65);
   padding-left: calc(100% / 11.65);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 70px;
   // position: fixed;
   // right: 0;
   // left: 0;
@@ -82,7 +84,7 @@
   &__lang-container {
     display: flex;
     gap: 7px;
-   
+
     @media screen and (max-width: 1020px) {
       display: none;
     }
@@ -121,6 +123,5 @@
       height: 2px;
       background-color: $color-violet;
     }
-
   }
 }

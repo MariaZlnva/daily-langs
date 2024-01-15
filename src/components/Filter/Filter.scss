@@ -1,0 +1,146 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.filter {
+  display: flex;
+  gap: 77px;
+  flex-direction: column;
+
+  @media screen and (max-width: 1020px) {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  &__btn {
+    @include font-sans($textM, $color-white, 600, 21.6px, 0.01em);
+    width: 200px;
+    height: 51px;
+    background-color: $color-violet;
+    border-radius: 100px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    @media screen and (max-width: 1020px) {
+      @include font-sans($textS, $color-white, 600, 16.8px, 0.01em);
+      width: 154px;
+      height: 43px;
+    }
+  }
+
+  &__btn-img {
+    margin-left: 18px;
+  }
+
+  &__content {
+    display: grid;
+    gap: 30px;
+    @media screen and (max-width: 1020px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include font-sans($textM, $color-black, 600, 21.6px, 0.01em);
+    margin: 0 0 30px 0;
+  }
+
+  &__label {
+    @include font-sans($textM, $color-black, 500, 21.6px, 0.01em);
+  }
+
+  &__input-range {
+    width: 100%;
+    margin-top: 10px;
+    height: 1px;
+    appearance: none;
+    background: $color-violet;
+    margin-bottom: 15px;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: $color-violet;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    &::-moz-range-thumb {
+      appearance: none;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: $color-violet;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    gap: 11px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    position: relative;
+    padding-left: 25px;
+    white-space: nowrap;
+    &::before {
+      content: " ";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      background: url(../../images/round.svg) 0 0 no-repeat;
+    }
+  }
+
+  &__input-radio {
+    display: none;
+    &:checked + .filter__subtitle::before {
+      background-size: 14px;
+      background: url(../../images/round-active.svg) 0 0 no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__subtitle-checkbox {
+    margin: 0;
+    position: relative;
+    padding-left: 29px;
+    white-space: nowrap;
+    &::before {
+      content: " ";
+      display: block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $color-violet;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__input-checkbox {
+    display: none;
+    &:checked + .filter__subtitle-checkbox::before {
+      background-color: $color-violet;
+    }
+  }
+
+  &__btn-filter {
+    display: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+    @media screen and (max-width: 1020px) {
+      display: block;
+    }
+  }
+}
