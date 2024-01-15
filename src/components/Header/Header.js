@@ -30,10 +30,10 @@ const Header = () => {
           <img className="header__lang-img" src={down} alt="Стрелка вниз" />
         </div>
         <button className="header__burger-btn" type="button">
-          <div class="header__burger">
-            <span class="header__burger-line"></span>
-            <span class="header__burger-line"></span>
-            <span class="header__burger-line"></span>
+          <div className="header__burger">
+            <span className="header__burger-line"></span>
+            <span className="header__burger-line"></span>
+            <span className="header__burger-line"></span>
           </div>
         </button>
       </div>

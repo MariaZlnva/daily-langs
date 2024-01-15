@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__links">
-        <a>Политика конфиденциальности</a>
-        <a>Условия пользования</a>
+        <a className="footer__link">Политика конфиденциальности</a>
+        <a className="footer__link">Условия пользования</a>
       </div>
       <img className="footer__logo" src={logo} alt="Логотип Daily langs" />
       <div className="footer__copyright">

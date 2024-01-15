@@ -10,7 +10,11 @@
     flex-direction: row;
     gap: 6px;
   }
-
+  &__item {
+    &_bottom {
+      margin-bottom: 15px;
+    }
+  }
   &__btn {
     @include font-sans($textM, $color-white, 600, 21.6px, 0.01em);
     width: 200px;

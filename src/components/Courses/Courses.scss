@@ -36,18 +36,10 @@
 
   &__title-bg {
     @include font-sans($textXL, $color-black, 800, 57.6px, 0.01em);
-    // padding: 8px 17px 13px;
-    // background-color: $color-ligth-green;
-    // border-radius: 100px;
     position: relative;
-
-    // @media screen and (max-width: 1020px) {
-    //   padding-left: 22px;
-    // }
 
     @media screen and (max-width: 580px) {
       @include font-sans($textM3, $color-black, 800, 38.4px, 0.01em);
-      // text-align: center;
       padding-left: 32px;
     }
 
@@ -95,8 +87,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    // width: 400px;
-    // height: 341px;
     background-color: $color-violet;
     border-radius: 30px;
     position: relative;

@@ -1,0 +1,77 @@
+@import "../../scss/variables.scss";
+
+.inputRange {
+  position: relative;
+  width: 83%;
+  margin-top: 19px;
+
+  &__slider-track {
+    width: 100%;
+    height: 1px;
+    background: $color-violet;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 13px;
+    }
+    &::-moz-range-track {
+      -moz-appearance: none;
+      height: 13px;
+    }
+    &::-ms-track {
+      appearance: none;
+      height: 13px;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 13px;
+      width: 13px;
+      background-color: $color-violet;
+      cursor: pointer;
+      margin-top: 0px;
+      pointer-events: auto;
+      border-radius: 50%;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: 13px;
+      width: 13px;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $color-violet;
+      pointer-events: auto;
+    }
+    &::-ms-thumb {
+      appearance: none;
+      height: 13px;
+      width: 13px;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $color-violet;
+      pointer-events: auto;
+    }
+    &:active::-webkit-slider-thumb {
+      background-color: #ffffff;
+      background-color: $color-violet;
+    }
+  }
+}

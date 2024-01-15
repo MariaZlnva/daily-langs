@@ -2,12 +2,10 @@
   &__content {
     margin: 0 auto;
     min-width: 320px;
-    // height: 100svh;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // gap: 72px;
 
     @media screen and (max-width: 1020px) {
       gap: 56px;

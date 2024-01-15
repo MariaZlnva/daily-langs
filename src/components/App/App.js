@@ -10,7 +10,6 @@ const App = () => {
       <Header />
       <Main />
       <Footer />
-      {/* <img src=<%=require('./images/girl1.svg')%> alt="Девушка в розовом свитере"> */}
     </div>
   );
 };

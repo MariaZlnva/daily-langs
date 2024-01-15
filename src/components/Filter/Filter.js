@@ -2,6 +2,7 @@ import React from "react";
 import "./Filter.scss";
 import whiteArrow from "../../images/down-white.svg";
 import filterIcon from "../../images/filter.svg";
+import InputRange from "../InputRange/InputRange";
 
 const Filter = () => {
   return (
@@ -16,20 +17,11 @@ const Filter = () => {
       </button>
 
       <div className="filter__content">
-        <div className="filter__item">
+        <div className="filter__item filter__item_bottom">
           <h4 className="filter__title">Продолжительность</h4>
-          <label for="period" className="filter__label">
+          <label className="filter__label">
             От 1 до 6 мес.
-            <input
-              className="filter__input-range"
-              type="range"
-              id="period"
-              name="period"
-              step="1"
-              min="1"
-              max="6"
-              defaultValue="0"
-            ></input>
+            <InputRange />
           </label>
         </div>
 
