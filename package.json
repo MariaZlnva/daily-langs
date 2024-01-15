@@ -7,7 +7,9 @@
     "build": "webpack --mode production",
     "serve": "webpack serve --open --mode development",
     "dev": "webpack --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.9.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "jsxobj": "^1.1.0",
     "mini-css-extract-plugin": "^2.7.7",
