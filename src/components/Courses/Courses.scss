@@ -317,4 +317,24 @@
       left: 130px;
     }
   }
+
+  &__item-ae {
+    width: 259px;
+    height: 167px;
+    background-image: url("../../images/ae.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -38px;
+    top: 67px;
+    z-index: 1;
+
+    @media screen and (max-width: 580px) {
+      width: 191px;
+      height: 124px;
+      background-size: contain;
+      top: 25px;
+      left: 130px;
+    }
+  }
 }

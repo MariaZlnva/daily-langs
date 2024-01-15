@@ -42,6 +42,7 @@ const Courses = () => {
             <div className="courses__item-flag"></div>
             <div className="courses__item-az"></div>
           </li>
+
           <li className="courses__item">
             <div className="courses__item-box">
               <h3 className="courses__item-title">Английский шаг за шагом:</h3>
@@ -100,9 +101,8 @@ const Courses = () => {
               alt="Фотография преподавателя"
             />
             <div className="courses__item-flag"></div>
-            <div className="courses__item-az"></div>
+            <div className="courses__item-ae"></div>
           </li>
-
           <li className="courses__item">
             <div className="courses__item-box">
               <h3 className="courses__item-title">Английский шаг за шагом:</h3>
@@ -131,7 +131,7 @@ const Courses = () => {
               alt="Фотография преподавателя"
             />
             <div className="courses__item-flag"></div>
-            <div className="courses__item-az"></div>
+            <div className="courses__item-ae"></div>
           </li>
         </ul>
       </div>
